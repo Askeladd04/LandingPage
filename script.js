@@ -8,6 +8,8 @@ const copyButton = document.querySelector(".copyButton");
 const menuList = document.querySelector('.menuList')
 const englishBtn = document.querySelector('#english')
 const russiaBtn = document.querySelector('#russia')
+const englishBtnPC = document.querySelector('#englishPC')
+const russiaBtnPC = document.querySelector('#russiaPC')
 const html = document.querySelector('html')
 
 let language = sessionStorage.getItem('lang') ?? 'en'
@@ -28,10 +30,26 @@ russiaBtn.addEventListener('click' , () => {
   location.reload()
 })
 
+englishBtnPC.addEventListener('click' , () => {
+  html.lang = 'en'
+  sessionStorage.setItem('lang' , 'en')
+  location.reload()
+})
+
+russiaBtnPC.addEventListener('click' , () => {
+  html.lang = 'ru'
+  sessionStorage.setItem('lang' , 'ru')
+  location.reload()
+})
+
 
 if(html.lang === 'en'){
   englishBtn.classList.add('isActiveLanguageBtn')
-}else russiaBtn.classList.add('isActiveLanguageBtn')
+  englishBtnPC.classList.add('isActiveLanguageBtn')
+}else {
+  russiaBtn.classList.add('isActiveLanguageBtn')
+  russiaBtnPC.classList.add('isActiveLanguageBtn')
+}
 
 copyButton.addEventListener("click", () => {
   navigator.clipboard
