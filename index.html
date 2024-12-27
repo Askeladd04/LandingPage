@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="stylesheet" href="./animateStyle.css" />
+  <title>Merdanov</title>
+</head>
+
+<body class="font-sora ">
+  <header class="flex items-center flex-col   mx-auto ">
+
+
+    <nav class="w-full px-[15px]  md:w-[1440px]  flex h-[73px] md:h-[104px] items-center justify-between ">
+      <img src="./assets/logo=website.svg" class="w-[100px] md:w-max" alt="" />
+      <ul class="flex gap-[20px] font-semibold text-[19px] navList hidden">
+        <li class="nav_item"><a href="#skills">Skills</a></li>
+        <li class="nav_item"><a href="#projects">Projects</a></li>
+        <li class="nav_item"><a href="mailto:merdanov1605@gmail.com?subject=Я хочу обсудить ваш проект">Сontact Me</a>
+        </li>
+      </ul>
+
+      <div class="hidden md:flex gap-5 text-[16px] font-semibold justify-center mt-[10px] items-center">
+      <div class="flex items-center gap-1">
+        <button class="p-[5px] rounded" id="english"><img src="./assets/usa-flag-circular-17882.svg" alt=""></button>
+        <span>En</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <button class="p-[5px] rounded" id="russia"><img src="./assets/russia-flag-circular-17765.svg" alt=""></button>
+        <span>Ru</span>
+      </div>
+      </div>
+
+      <div class="flex flex-col gap-1 cursor-pointer burgerMenu">
+        <span class="burger_item "></span>
+        <span class="burger_item "></span>
+        <span class="burger_item "></span>
+      </div>
+    </nav>
+
+    <div class="w-full py-[10px] bg-slate-50  hidden menuList absolute top-[73px] z-10 shadow-md">
+      <ul class="flex flex-col gap-[10px] font-semibold text-[16px] text-center">
+        <li class="nav_item"><a href="#skills">Skills</a></li>
+        <li class="nav_item"><a href="#projects">Projects</a></li>
+        <li class="nav_item"><a href="mailto:merdanov1605@gmail.com?subject=Я хочу обсудить ваш проект">Сontact Me</a>
+        </li>
+      </ul>
+
+
+
+
+      <div class="flex gap-5 text-[16px] font-semibold justify-center mt-[10px] items-center">
+        <span class="nav_item" lang="en">Language: </span>
+        <div class="flex items-center gap-1">
+          <button class="p-[5px] rounded" id="english"><img src="./assets/usa-flag-circular-17882.svg" alt=""></button>
+          <span>En</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="p-[5px] rounded" id="russia"><img src="./assets/russia-flag-circular-17765.svg" alt=""></button>
+          <span>Ru</span>
+        </div>
+    </div>
+
+    </div>
+
+    <section
+      class="flex  items-center  md:h-[600px] w-full md:w-[1400px] my-[40px] mx-[16px]    md:m-[80px] font-sora ">
+
+
+      <div
+        class="w-full h-full flex flex-wrap items-center p-[10px] md:p-0 justify-center md:justify-normal  relative  md:m-[60px] ">
+        <div class="md:absolute md:right-0 w-full h-min md:w-max flex justify-center items-center  md:block">
+          <img src="./assets/HeaderAva.svg" class="md:inline-flex hidden" alt="" />
+          <img src="./assets/SkillsIcons/column.svg" class="md:hidden w-[90%]" alt="">
+        </div>
+
+        <div class="w-[700px] mt-[48px]">
+          <p class="text-[22px] md:text-[48px] font-normal leading-normal text-left tracking-wide font-sora">
+            Hello I`am
+            <span class="animate_name inline-block relative font-bold">Myrat Merdanov
+            </span>
+            <span class="font-bold"><br />Frontend</span>
+            <span class="font-bold" style="-webkit-text-stroke: 2px black; color: transparent">Developer</span>
+            <br />
+            Based In <span class="font-bold">Ashgabat</span>
+          </p>
+          <p lang="en" class="text-left mt-[20px] text-[14px] md:text-[17px]">
+            React Frontend Developer committed to learning, growth, and
+            excellence. Eager to contribute to challenging projects,
+            continuously improve skills in React, and stay updated with the
+            latest industry trends.
+          </p>
+
+          <p lang="ru" class="text-left mt-[20px] text-[14px] md:text-[17px]">
+            Разработчик React Frontend, стремящийся к обучению, росту и
+            совершенствованию. Желающий внести свой вклад в сложные проекты,
+            постоянно совершенствовать навыки в React и быть в курсе
+            последних тенденций в отрасли.
+          </p>
+
+          <div class="flex gap-[32px] mt-[50px] md:absolute md:bottom-[-20px] left-0 ">
+            <a href="https://t.me/MyratMerdanov" class="contact_btn "><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+              </svg></a>
+            <a href="" class="contact_btn copyButton"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+              </svg></a>
+          </div>
+        </div>
+
+    </section>
+  </header>
+
+
+  <main class="flex justify-center flex-col items-center">
+    <section class="flex flex-col flex-wrap  md:m-[80px] w-full md:w-[1440px] h-full " id="skills">
+      <h2 lang="en" class="text-center text-[28px] md:text-[48px] p-[20px]">My <span class="font-extrabold">Skills</span></h2>
+      <h2 lang="ru" class="text-center text-[28px] md:text-[48px] p-[20px]">Мои <span class="font-extrabold">Навыки</span></h2>
+
+      <div class="w-full md:w-[1000px] mx-auto flex md:gap-x-[50px] gap-y-[20px]  flex-wrap justify-center mt-[40px]">
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsHtml.svg" alt="">
+          <h2 class="skill_card_title">Html</h2>
+        </div>
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsCss.svg" alt="">
+          <h2 class="skill_card_title">Css</h2>
+        </div>
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsJavascript.svg" alt="">
+          <h2 class="skill_card_title">Java Script</h2>
+        </div>
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsTypescript.svg" alt="">
+          <h2 class="skill_card_title">Type Script</h2>
+        </div>
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsReactDark.svg" alt="">
+          <h2 class="skill_card_title">React</h2>
+        </div>
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsRedux.svg" alt="">
+          <h2 class="skill_card_title">Redux</h2>
+        </div>
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsRedux.svg" alt="">
+          <h2 class="skill_card_title">RTk Query</h2>
+        </div>
+
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsHtmxDark.svg" alt="">
+          <h2 class="skill_card_title">Zustand</h2>
+        </div>
+
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsTailwindcssDark.svg" alt="">
+          <h2 class="skill_card_title">TailwindCss</h2>
+        </div>
+
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/ant-design-svgrepo-com.svg" alt="">
+          <h2 class="skill_card_title">Antd</h2>
+        </div>
+
+
+        <div class="skill_card">
+          <img src="./assets/SkillsIcons/SkillIconsBootstrap.svg" alt="">
+          <h2 class="skill_card_title">Bootstrap</h2>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="bg-slate-950 h-full w-full text-white flex justify-center mt-[20px]" id="projects">
+      <div class="w-full md:w-[1440px] flex flex-col ">
+
+        <h2 lang="en" class="w-full text-center text-[28px] md:text-[48px] mb-[50px]">My Projects</h2>
+        <h2 lang="ru" class="w-full text-center text-[28px] md:text-[48px] mb-[50px]">Мои Проекты</h2>
+
+
+        <div class="flex gap-y-5 md:gap-10 justify-between flex-wrap">
+
+          <div class="slider flex items-center justify-center w-full">
+            <div class="slides">
+              <div class="slide cursor-pointer"><img class="w-full"
+                  src="./assets/Снимок экрана от 2024-12-25 19-10-54.png" alt="">
+              </div>
+              <div class="slide cursor-pointer"><img class="w-full"
+                  src="./assets/Снимок экрана от 2024-12-25 19-09-27.png" alt="">
+              </div>
+              <div class="slide cursor-pointer"><img class="w-full"
+                  src="./assets/Снимок экрана от 2024-12-25 22-57-36.png" alt="">
+              </div>
+            </div>
+
+            <div class="flex gap-[30px] absolute bottom-1 left-[45%] md:left-[50%]  z-10 w-[30%] justify-between">
+              <ul class="flex gap-[10px] image_list">
+                <li data-index="0"
+                  class="bg-red-800  w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full cursor-pointer transition duration-500">
+                </li>
+                <li data-index="1"
+                  class="bg-red-800  w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full cursor-pointer transition duration-500 ">
+                </li>
+                <li data-index="2"
+                  class="bg-red-800  w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full cursor-pointer transition duration-500 ">
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="project_description_wrapper">
+            <h2 class="project_title">
+              BookStoreX
+            </h2>
+            <p lang="en" class="leading-10 text-center">
+              Web applications for viewing and purchasing books.(Only for PC)
+              <br />Technologies used: <span class="font-semibold">React , CSS , Redux Toolkit</span>.
+              <br /> Project link: <a href="https://github.com/Askeladd04/BookStoreX"
+                class="underline underline-offset-1 hover:text-rose-500">https://github.com/Askeladd04/BookStoreX</a>
+            </p>
+            <p lang="ru" class="leading-10 text-center">
+              Веб-приложения для просмотра и покупки книг.(&nbsp;Только дляПК)
+              <br />Используемые технологии: <span class="font-semibold">React , CSS , Redux Toolkit</span>.
+              <br /> Ссылка на проект: <a href="https://github.com/Askeladd04/BookStoreX"
+                class="underline underline-offset-1 hover:text-rose-500">https://github.com/Askeladd04/BookStoreX</a>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-10 justify-between my-[50px] w-full flex-wrap">
+
+          <div class="project_description_wrapper order-2 md:order-1">
+            <h2 class="project_title">GitHubSearcher</h2>
+            <p lang="en" class="leading-10 mt-[10px] text-center"><span>A web application that allows users to search for
+                repositories and users on the GitHub
+                platform.</span>
+              <br />Technologies used: <span class="font-semibold">React, TailwindCss , Redux Toolkit , RTK&nbsp; query
+                ,Framer Motion</span>
+              <br>Project Link: <a class="underline underline-offset-1 hover:text-rose-500"
+                href="https://github.com/Askeladd04/GitHubSearcher-Restore-">https://github.com/Askeladd04/GitHubSearcher-Restore-</a>
+            </p>
+
+            <p lang="ru" class="leading-10 mt-[10px] text-center"><span>Веб-приложение, позволяющее пользователям искать
+              репозитории и пользователей на GitHub</span>
+            <br />Используемые технологии: <span class="font-semibold">React, TailwindCss , Redux Toolkit , RTK&nbsp; query
+              ,Framer Motion</span>
+            <br>Ссылка на проект: <a class="underline underline-offset-1 hover:text-rose-500"
+              href="https://github.com/Askeladd04/GitHubSearcher-Restore-">https://github.com/Askeladd04/GitHubSearcher-Restore-</a>
+          </p>
+          </div>
+
+          <div class="order-1 md:order-2"><img src="./assets/Снимок экрана от 2024-12-26 16-01-35.png" class="w-[600px]"
+              alt=""></div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer
+    class="w-full border-t-[1px] p:[20px] md:py-[20px] md:px-[60px] bg-slate-950 flex justify-between text-white text-[14px] md:text-[17px] justify-between ">
+    <p class="leading-8"> Email: <span class="font-semibold">merdanow1605@gmail.com</span>
+      <br /> Phone number: <span class="font-semibold">+99365458698</span>
+      <br /> <span class="font-semibold">@2024 Ashgabat</span>
+    </p>
+
+    <img class="hidden md:inline" src="./assets/Frame 16.svg" alt="">
+
+
+  </footer>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contact_btn{
+    @apply  p-[11px] border-2 border-[#000] text-black rounded hover:bg-[#000] transition duration-500 cursor-pointer 
+}
+
+.nav_item{
+    @apply cursor-pointer hover:text-[#444]
+}
+
+.skill_card{
+    @apply w-[150px] h-[150px] border-2 border-[#000]  flex flex-col justify-center  items-center gap-5 rounded-md
+}
+
+.skill_card_title{
+    @apply text-[23px] font-semibold
+}
+
+
+.slider {
+    @apply  md:w-[600px] w-full overflow-hidden mb-[50px] relative
+}
+
+.slides {
+   @apply w-full flex transition duration-500
+}
+
+
+.project_description_wrapper{
+    @apply w-[700px] flex flex-col  gap-10 text-[14px] md:text-[18px]
+}
+
+.burger_item{
+    @apply w-[25px] h-[3px] bg-slate-950 rounded transition duration-500
+}
+
+
+.project_title{
+   @apply text-[16px] md:text-[24px] text-center text-sky-600
+}
