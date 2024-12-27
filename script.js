@@ -53,7 +53,7 @@ if(html.lang === 'en'){
 
 copyButton.addEventListener("click", () => {
   navigator.clipboard
-    .writeText("+993 65458698")
+    .writeText("+99365458698")
     .then(() => alert("Номер телефона скопирован!"))
     .catch((err) => console.error("Ошибка копирования:", err));
 });
