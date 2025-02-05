@@ -71,41 +71,47 @@ copyButton.addEventListener("click", () => {
 
 // Слайд изображения
 
+hammer.get("swipe").set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
 let currentIndex = 0;
 
 function showNextSlide() {
+  if (currentIndex < 0) {
+    currentIndex = slideCount - 1;
+  } else if (currentIndex >= slideCount) {
+    currentIndex = 0;
+  }
+
   slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 
   allImages.forEach((img) => img.classList.remove("isActive"));
-
-  const image = document.querySelector(
-    `.image_list li:nth-child(${currentIndex + 1})`
-  );
-  image.classList.add("isActive");
+  document.querySelector(`.image_list li:nth-child(${currentIndex + 1})`).classList.add("isActive");
 }
 
+let autoSlide = setInterval(() => {
+  currentIndex = (currentIndex + 1) % slideCount;
+  showNextSlide();
+}, 4000);
 
-allImages.forEach((dot, index) => {
-  dot.addEventListener("click", () => goToSlide(index));
+function resetInterval() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(() => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    showNextSlide();
+  }, 4000);
+}
+
+hammer.on("swiperight", () => {
+  currentIndex = (currentIndex + 1) % slideCount;
+  showNextSlide();
+  resetInterval();
 });
 
-function goToSlide(index) {
-  currentIndex = index;
+hammer.on("swipeleft", () => {
+  currentIndex = (currentIndex - 1 + slideCount) % slideCount;
   showNextSlide();
-}
-
- 
-
-   hammer.on('swiperight' , () => {
-    currentIndex = (currentIndex + 1) % slideCount
-    showNextSlide()
-  })
-
-  hammer.on('swipeleft', () => {
-    currentIndex = (currentIndex  - 1 + slideCount) % slideCount
-    showNextSlide()
-  })
-
+  resetInterval();
+});
 
 
 // Скрытие и анимация при нажатии BurgerMenu
