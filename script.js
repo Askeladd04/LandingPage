@@ -1,3 +1,5 @@
+
+
 const allImages = document.querySelectorAll(".image_list li");
 const slides = document.querySelector(".slides");
 const slideItems = document.querySelectorAll(".slide");
@@ -11,7 +13,10 @@ const russiaBtn = document.querySelector('#russia')
 const englishBtnPC = document.querySelector('#englishPC')
 const russiaBtnPC = document.querySelector('#russiaPC')
 const html = document.querySelector('html')
+const hammer = new Hammer(slides)
 
+
+// Изменения и сохранения языка
 let language = sessionStorage.getItem('lang') ?? 'en'
 
 html.lang = language
@@ -51,12 +56,20 @@ if(html.lang === 'en'){
   russiaBtnPC.classList.add('isActiveLanguageBtn')
 }
 
+
+
+
+//Копирования номера телефона
+
 copyButton.addEventListener("click", () => {
   navigator.clipboard
-    .writeText("+99365458698")
+    .writeText("+993 65458698")
     .then(() => alert("Номер телефона скопирован!"))
     .catch((err) => console.error("Ошибка копирования:", err));
 });
+
+
+// Слайд изображения
 
 let currentIndex = 0;
 
@@ -71,6 +84,7 @@ function showNextSlide() {
   image.classList.add("isActive");
 }
 
+
 allImages.forEach((dot, index) => {
   dot.addEventListener("click", () => goToSlide(index));
 });
@@ -80,10 +94,24 @@ function goToSlide(index) {
   showNextSlide();
 }
 
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slideCount;
-  showNextSlide();
-}, 4000);
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slideCount;
+    showNextSlide();
+  }, 4000);
+
+  hammer.on('swiperight' , () => {
+    currentIndex = (currentIndex + 1) % slideCount
+    showNextSlide()
+  })
+
+  hammer.on('swipeleft', () => {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount
+    showNextSlide()
+  })
+
+
+
+// Скрытие и анимация при нажатии BurgerMenu
 
 let activeBurger = false;
 
@@ -113,7 +141,7 @@ if (Number(document.documentElement.clientWidth) < 1000) {
 }
 
 
-
+// Скрытие не подхядяших языков
 
 const pageLang = document.documentElement.lang;
 
@@ -123,4 +151,23 @@ elements.forEach((el) => {
   if (el.lang !== pageLang) {
     el.classList.add("hidden");
   }
+});
+
+// Intersection Observer 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const upSlide = document.querySelector('.upSlide');
+  const upSlideActive = document.querySelector('.upSLideActive');
+
+  
+  const observer = new IntersectionObserver((entries , observer) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting) {
+        upSlide.classList.remove('hidden')
+      }else upSlide.classList.add('hidden')
+    })
+  }, {threshold: 0.3 , rootMargin: '0px 20px'})
+  
+  observer.observe(upSlideActive)
 });
