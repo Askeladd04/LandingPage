@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -566,6 +570,10 @@ video {
   bottom: 0.25rem;
 }
 
+.bottom-24 {
+  bottom: 6rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -574,12 +582,20 @@ video {
   left: 45%;
 }
 
+.right-10 {
+  right: 2.5rem;
+}
+
 .top-\[73px\] {
   top: 73px;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .order-1 {
@@ -634,6 +650,10 @@ video {
   margin-top: 50px;
 }
 
+.mt-\[5px\] {
+  margin-top: 5px;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -644,6 +664,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-\[10px\] {
@@ -661,6 +685,18 @@ video {
 .h-min {
   height: -moz-min-content;
   height: min-content;
+}
+
+.h-52 {
+  height: 13rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-\[100px\] {
@@ -689,6 +725,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 .cursor-pointer {
@@ -721,6 +773,10 @@ video {
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-5 {
@@ -837,6 +893,11 @@ video {
   font-size: 28px;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -867,6 +928,11 @@ video {
 
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .text-rose-500 {
@@ -950,7 +1016,7 @@ video {
 }
 
 .skill_card_title {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -981,7 +1047,8 @@ video {
   display: flex;
   width: 700px;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.25rem;
+  text-align: center;
   font-size: 14px;
 }
 
@@ -1039,6 +1106,10 @@ video {
     right: 0px;
   }
 
+  .md\:right-20 {
+    right: 5rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -1071,6 +1142,14 @@ video {
     display: none;
   }
 
+  .md\:h-10 {
+    height: 2.5rem;
+  }
+
+  .md\:h-80 {
+    height: 20rem;
+  }
+
   .md\:h-\[104px\] {
     height: 104px;
   }
@@ -1081,6 +1160,10 @@ video {
 
   .md\:h-\[600px\] {
     height: 600px;
+  }
+
+  .md\:w-10 {
+    width: 2.5rem;
   }
 
   .md\:w-\[1000px\] {
@@ -1137,5 +1220,10 @@ video {
 
   .md\:text-\[48px\] {
     font-size: 48px;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

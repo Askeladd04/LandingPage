@@ -15,7 +15,7 @@
 }
 
 .skill_card_title{
-    @apply text-[23px] font-semibold
+    @apply text-[20px] font-semibold
 }
 
 
@@ -29,7 +29,7 @@
 
 
 .project_description_wrapper{
-    @apply w-[700px] flex flex-col  gap-10 text-[14px] md:text-[18px]
+    @apply w-[700px] flex flex-col  gap-5 text-center text-[14px] md:text-[18px] 
 }
 
 .burger_item{
