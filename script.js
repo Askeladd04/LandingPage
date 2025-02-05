@@ -94,18 +94,15 @@ function goToSlide(index) {
   showNextSlide();
 }
 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % slideCount;
-    showNextSlide();
-  }, 4000);
+ 
 
    hammer.on('swiperight' , () => {
-    currentIndex = (currentIndex - 1 + slideCount) % slideCount
+    currentIndex = (currentIndex + 1) % slideCount
     showNextSlide()
   })
 
   hammer.on('swipeleft', () => {
-    currentIndex = (currentIndex  + 1) % slideCount
+    currentIndex = (currentIndex  - 1 + slideCount) % slideCount
     showNextSlide()
   })
 
